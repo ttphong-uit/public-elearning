@@ -1,0 +1,55 @@
+.allCourse {
+  width: 100%;
+  .wrap-top-content {
+    padding: 40px 20px 0px;
+    .tittle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .search-bar {
+        width: 400px;
+        box-shadow: 4px 3px 2px 2px rgba(123, 147, 174, 0.42);
+        overflow: hidden;
+        border-radius: 3px;
+      }
+      .sort {
+        .btn-effect {
+          border-radius: 0px !important;
+          background-color: $color-pr-1;
+          color: white;
+          transition: all 0.2s ease;
+          box-shadow: 4px 3px 2px 2px rgba(123, 147, 174, 0.42);
+          &:hover {
+            background-color: $color-pr-2;
+            box-shadow: 4px 3px 2px 2px rgba(123, 147, 174, 0.42);
+          }
+          &:active {
+            transition: all 0.2s ease;
+            transform: scale(1.1);
+            box-shadow: 4px 3px 2px 2px rgba(123, 147, 174, 0.42);
+          }
+        }
+        .sort-tool {
+          justify-content: flex-end;
+        }
+        .dropdown-menu {
+          width: 180px;
+          text-align: center;
+          left: 5px !important;
+          a {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            &:hover {
+              color: white;
+              background-color: $color-pr-1;
+              transition: all 0.2 ease;
+            }
+          }
+        }
+      }
+    }
+  }
+  .allCourse-body {
+    padding: 10px 20px;
+  }
+}

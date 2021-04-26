@@ -1,0 +1,10 @@
+.um-modal{
+    display: flex;
+    justify-content: space-between;
+    .um-modal-content-left{
+        width: 49%;
+    }
+    .um-modal-content-right{
+        width: 49%;
+    }
+}

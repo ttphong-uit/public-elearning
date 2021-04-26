@@ -1,0 +1,51 @@
+.item-course-of-user {
+	padding: 10px 20px;
+	background: white;
+	margin: 20px 0;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+	.content-left {
+		img {
+			width: 80px;
+			height: 80px;
+			background: center cover;
+			margin-left: 15px;
+		}
+		.mct-item-course-of-user {
+			margin-left: 15px;
+			h5 {
+				@include text(black, $fs-md-lg - 5, $fw-bold-2);
+				font-family: $font-title;
+				letter-spacing: 1px;
+				a {
+					text-decoration: none;
+					@include text(black, $fs-md, normal);
+					margin-right: 5px;
+					padding: 3px 7px;
+					border-radius: 3px;
+					letter-spacing: 0;
+					background: $color-se-2;
+					color: white;
+					cursor: pointer;
+					&:hover {
+						background: $color-se-1;
+					}
+				}
+			}
+		}
+	}
+	.content-right {
+		.fee {
+			@include text($color-pr-1, $fs-lg, $fw-bold-1);
+		}
+		i {
+			font-size: $fs-md-lg;
+			color: rgba(0, 0, 0, 0.7);
+			cursor: pointer;
+			&:hover {
+				color: rgba(255, 0, 0, 0.5);
+			}
+			margin-left: 50px;
+		}
+	}
+}

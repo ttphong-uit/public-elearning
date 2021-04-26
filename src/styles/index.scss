@@ -1,0 +1,36 @@
+//helps
+@import './helpers/variables';
+@import './helpers/mixin';
+//components
+@import './common/common';
+@import './common/button';
+@import './common/input';
+@import './components/header';
+@import './components/footer';
+@import './components/khoahoc';
+@import './components/itemCategory';
+@import './components/itemCourseOfUser.scss';
+@import './components/coursePopular.scss';
+@import './components/admin/userManagementModal.scss';
+@import './components/admin/coursesManagementModal.scss';
+@import './components/admin/widthModal.scss';
+//page
+@import './pages/PageNotFound.scss';
+@import './pages/home/Intro.scss';
+@import './pages/home/category.scss';
+@import './pages/home/stepbuycourse.scss';
+@import './pages/home/listcourse-home.scss';
+@import './pages/home/InforElearning.scss';
+@import './pages/home/feel.scss';
+@import './pages/form/Form.scss';
+@import './pages/detailCart/detaiCart.scss';
+@import './pages/detailCart/billCart.scss';
+@import './pages/Course/allcourse.scss';
+@import './pages/detailCourse/detailCourse.scss';
+@import './pages/Course/ItemCourse.scss';
+@import './pages/Course/tableItemCourse.scss';
+@import './pages/Course/courseCategory.scss';
+@import './pages/ProfileUser/profileUser.scss';
+@import './pages/ProfileUser/CourseAttended.scss';
+@import './pages/ProfileUser/AccountInfo.scss';
+@import './pages/admin/courseManagement.scss';

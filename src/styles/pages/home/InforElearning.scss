@@ -1,0 +1,38 @@
+.info-elearning {
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	.ie-overflow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.75);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.ie-content {
+		padding: 100px 250px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		.icon-group {
+			text-align: center;
+			letter-spacing: 1px;
+			i {
+				@include text(white, $fs-xl, $fw-thin);
+			}
+			.name-icon {
+				font-family: $font-title;
+				@include text($color-se-3, $fs-md, normal);
+			}
+			.amount {
+				@include text($color-pr-3, $fs-xl, $fw-bold-1);
+			}
+		}
+	}
+}

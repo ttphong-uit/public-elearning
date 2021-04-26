@@ -1,0 +1,32 @@
+.list-course {
+	padding: 40px 100px;
+	width: 100%;
+	.item-course {
+		width: 31%;
+		display: none;
+	}
+	.lc-main-content {
+		.lc-content {
+			width: 100%;
+			margin: 25px 0;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.lc-btn-group {
+			text-align: center;
+			.btnn {
+				font-size: $fs-md + 3;
+				margin: 0 5px;
+				font-family: $font-title;
+				font-weight: $fw-bold-1;
+				display: inline-flex;
+				i {
+					font-weight: normal;
+					font-size: $fs-md-lg;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}

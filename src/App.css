@@ -1,0 +1,10 @@
+button:focus,
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+button:visited,
+input:visited {
+  outline: none !important;
+  box-shadow: none !important;
+}

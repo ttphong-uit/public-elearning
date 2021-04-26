@@ -1,0 +1,56 @@
+.list-course-popular {
+	padding: 0 50px;
+	margin-top: 50px;
+	.title {
+		margin-left: 10px;
+		margin-bottom: 20px;
+		font-weight: $fw-bold-1;
+	}
+	.owl-stage-outer {
+		padding: 2px 5px;
+		box-sizing: content-box;
+		width: 100%;
+	}
+	.owl-nav {
+		margin: 0;
+		display: inline;
+		button {
+			display: inline;
+			span {
+				position: absolute;
+				top: 100px;
+				right: -35px;
+				display: inline-block;
+				background-color: #fff;
+				border-radius: 50%;
+				box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+				color: $color-pr-2;
+				height: 47px;
+				width: 47px;
+				z-index: 3;
+				line-height: 42px;
+				padding-left: 5px;
+				font-size: 50px;
+			}
+			&.owl-prev {
+				span {
+					left: -25px;
+					padding-right: 10px;
+				}
+			}
+			&.disabled {
+				display: none;
+			}
+			&:hover {
+				span {
+					color: $color-pr-1;
+					box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.15);
+				}
+			}
+		}
+	}
+	.owl-dots {
+		background: none;
+		margin-top: -20px;
+	}
+}

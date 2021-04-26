@@ -1,0 +1,51 @@
+.bill-cart {
+	width: 100%;
+
+	h3 {
+		@include text(rgba(0, 0, 0, 0.8), $fs-md-lg, $fw-bold-2);
+		font-family: $font-title;
+		margin-bottom: 40px;
+	}
+	.so-luong {
+		@include text(rgba(0, 0, 0, 0.8), $fs-md, $fw-bold-2);
+		margin-bottom: 10px;
+	}
+	.tam-tinh {
+		@include text(rgba(0, 0, 0, 0.8), $fs-md, $fw-bold-2);
+		.fee {
+			@include text($color-pr-2, $fs-md-lg - 5, $fw-bold-1);
+		}
+		margin-bottom: 10px;
+	}
+	.apply {
+		position: relative;
+		input,
+		button {
+			margin: 0 5px;
+		}
+		input {
+			padding: 5px 10px;
+		}
+		margin-bottom: 30px;
+		&::after {
+			content: '';
+			@include absolute_bottom(-20px, 20%, 60%, 1px);
+			background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent);
+		}
+	}
+	.total {
+		@include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 5, $fw-bold-2);
+		.fee {
+			@include text($color-pr-2, $fs-md-lg, $fw-bold-1);
+		}
+	}
+	.text-right {
+		@include text(rgba(0, 0, 0, 0.5), $fs-sm, normal);
+	}
+	.btn--blue {
+		width: 100%;
+		font-size: $fs-md-lg - 5;
+		margin-top: 20px;
+		font-family: $font-title;
+	}
+}

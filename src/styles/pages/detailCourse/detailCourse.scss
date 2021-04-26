@@ -1,0 +1,114 @@
+.detail-Course {
+	margin-top: 62px;
+	.body-detailCourse {
+		padding: 20px 50px;
+		.Information-Course {
+			.tittle-course {
+				padding: 0px 15px;
+				font-size: 18px;
+				margin-bottom: 20px;
+				span {
+					padding: 3px 20px;
+					margin-left: 10px;
+					background-color: $color-pr-4;
+					color: white;
+					border-radius: 13px;
+					font-size: 14px;
+				}
+			}
+			.info-content {
+				margin-bottom: 20px;
+				.borderxx {
+					border-left: 1px solid #ebebeb;
+					border-right: 1px solid #ebebeb;
+				}
+				.item-content {
+					.content {
+						p {
+							text-align: center;
+							font-size: 16px;
+							color: #303030;
+							p {
+								text-align: center;
+								font-size: 14px;
+								color: grey;
+							}
+							i {
+								color: rgba(255, 255, 0, 0.836);
+							}
+						}
+						button {
+							padding: 10px 15px !important;
+							font-size: 14px;
+						}
+					}
+					.last-content {
+						text-align: right;
+					}
+				}
+				.teacher-content {
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+				}
+				.teacher-img {
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+				}
+			}
+		}
+		padding: 20px 30px;
+		.image-detail-course {
+			box-sizing: border-box;
+			overflow: hidden;
+			border: 5px solid $color-se-3;
+			box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+			position: relative;
+			&:hover {
+				img {
+					transform: scale(1.1);
+					transition: all 0.3s ease-out;
+				}
+			}
+			img {
+				width: 100%;
+				height: 400px;
+				transition: all 0.3s ease-out;
+				background-position: center;
+				background-size: cover;
+			}
+			.dc-overflow {
+				@include absolute(0, 0, 100%, 100%);
+				background-color: rgba(0, 0, 0, 0.1);
+				z-index: 10;
+			}
+		}
+		.FearureCourse {
+			.featre-tittle {
+				padding: 0px 15px;
+				font-size: 22px;
+				margin-bottom: 20px !important;
+				text-transform: uppercase;
+			}
+			ul {
+				list-style: none;
+				padding: 0px 15px;
+				li {
+					padding: 15px 0px;
+					i {
+						color: $color-pr-4;
+						margin-right: 10px;
+					}
+					span {
+						font-size: 16px;
+						font-family: $font-title;
+						span {
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+	}
+}

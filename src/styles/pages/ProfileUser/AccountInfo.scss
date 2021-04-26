@@ -1,0 +1,29 @@
+.AccountInfo{
+    label{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 1em;
+    }
+    input{
+        border-radius: 5px;
+        box-shadow: 4px 3px 2px 2px rgba(123, 147, 174, 0.42);
+        margin-bottom: 1.5em;
+        padding: 1rem 1.5rem;
+        ;
+        &:focus{
+            box-shadow: 4px 3px 2px 2px rgba(123, 147, 174, 0.42)
+        }
+    }
+    .massage-error {
+        @include text(rgba(255, 0, 0, 0.8), $fs-sm, normal);
+    }
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 40px;
+    .btn--blue{
+        margin-right:10px;
+    }
+}

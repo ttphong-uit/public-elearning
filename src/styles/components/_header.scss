@@ -1,0 +1,263 @@
+.header {
+	position: fixed;
+	width: 100%;
+	background: white;
+	z-index: 999;
+	top: 0;
+	color: white;
+	transition: all 0.2s linear;
+	transform: translateY(0);
+	&.navbar--hidden {
+		transform: translateY(-100%);
+	}
+	&.header-home {
+		background: transparent;
+		.nav-link {
+			color: white !important;
+		}
+		h1 {
+			color: $color-pr-3 !important;
+		}
+		.account {
+			span {
+				color: white;
+				margin-left: 5px;
+			}
+		}
+	}
+	.account {
+		span {
+			color: black;
+		}
+	}
+	.navbar {
+		padding: 0 100px;
+		align-items: flex-end;
+		box-shadow: 0 0 10px 0 #0000005e;
+		.navbar-brand {
+			width: 250px;
+			display: flex;
+			img {
+				width: 50px;
+				margin-right: 5px;
+			}
+			h1 {
+				align-self: flex-end;
+				margin: 0;
+				@include text($color-se-2, $fs-lg, $fw-bold-1);
+				font-family: 'Grenze', serif;
+			}
+		}
+		.navbar-nav {
+			padding-bottom: 7px;
+			margin-left: 20px;
+			.nav-item {
+				margin-right: 5px;
+				.nav-link {
+					@include text(black, $fs-md, $fw-bold-2);
+					font-family: $font-title !important;
+					letter-spacing: 1px;
+					&:hover {
+						color: $color-pr-3 !important;
+					}
+					&.active {
+						color: $color-pr-2 !important;
+						font-weight: $fw-bold-2;
+					}
+				}
+			}
+		}
+		.navbar-right {
+			display: flex;
+			align-self: center;
+			align-items: center;
+			.account {
+				position: relative;
+				.account-img {
+					img {
+						width: 30px;
+						height: 30px;
+						border: 2px solid white;
+						border-radius: 50%;
+						margin-right: 5px;
+					}
+				}
+				.account-content {
+					background: white;
+					@include absolute(200%, 0, 200px, auto);
+					color: black;
+					padding: 10px;
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.2s linear;
+					box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+					p,
+					a {
+						text-decoration: none;
+						color: black;
+						cursor: pointer;
+						&:hover {
+							color: $color-pr-2;
+							i {
+								color: black;
+							}
+						}
+					}
+					padding: 10px;
+					&::before {
+						@include absolute(0, 0, 100%, 5px);
+						content: '';
+						background: $color-se-1;
+					}
+					img {
+						width: 15px;
+						height: 15px;
+					}
+				}
+				&:hover {
+					.account-content {
+						top: 100%;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+			.cart {
+				cursor: pointer;
+				margin-right: 30px;
+				width: 30px;
+				height: 30px;
+				padding: 5px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0.3);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				cursor: auto;
+
+				.total {
+					text-align: center;
+					font-family: $font-title;
+					@include text($color-pr-1, $fs-md-lg, $fw-bold-1);
+					margin-bottom: 25px;
+					position: relative;
+					&::after {
+						@include absolute_bottom(-14px, 20%, 60%, 1px);
+						background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent);
+						content: '';
+					}
+				}
+				.mct-cart {
+					@include absolute(100px, -160px, 350px, auto);
+					background: white;
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.2s linear;
+					box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+					padding: 12px 0;
+					.no-course {
+						color: black;
+						text-align: center;
+						@include text(rgba(255, 0, 0, 0.7), $fs-md, $fw-bold-1);
+					}
+					&::before {
+						@include absolute(0, 0, 100%, 5px);
+						content: '';
+						background: $color-se-1;
+					}
+					.ct-cart {
+						max-height: 420px;
+						overflow: overlay;
+						padding: 15px 15px;
+						&::-webkit-scrollbar {
+							width: 10px;
+						}
+						&::-webkit-scrollbar-track {
+							background: #f1f1f1;
+						}
+						&::-webkit-scrollbar-thumb {
+							background: rgb(121, 115, 115);
+							height: 100px;
+						}
+						&::-webkit-scrollbar-thumb:hover {
+							background: #555;
+						}
+					}
+				}
+				&:hover {
+					background: rgba(0, 0, 0, 0.6);
+					.mct-cart {
+						top: 30px;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+				.amount {
+					position: absolute;
+					top: -2px;
+					right: -2px;
+					background: red;
+					width: 15px;
+					height: 15px;
+					line-height: 17px;
+					border-radius: 50%;
+					font-size: $fs-sm - 4;
+					text-align: center;
+					color: white;
+					transition: all 0.2s linear;
+					transition-delay: 0.3s;
+					transform: scale(1);
+					&.updateCart {
+						transform: scale(1.2);
+					}
+				}
+			}
+			.item-cart {
+				color: black;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 25px;
+				position: relative;
+				&::after {
+					@include absolute_bottom(-14px, 20%, 60%, 1px);
+					background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent);
+					content: '';
+				}
+				img {
+					width: 80px;
+					height: 80px;
+				}
+				.ct-item-cart {
+					align-self: center;
+					margin-left: 10px;
+					h5,
+					p {
+						margin-bottom: 0;
+					}
+					h5 {
+						@include text(black, $fs-md, $fw-bold-2);
+					}
+					p {
+						@include text(black, $fs-sm, $fw-thin);
+					}
+					.fee {
+						@include text($color-pr-1, $fs-md-lg, $fw-bold-1);
+					}
+				}
+				i {
+					font-size: $fs-md-lg;
+					color: rgba(0, 0, 0, 0.7);
+					cursor: pointer;
+					&:hover {
+						color: rgba(255, 0, 0, 0.5);
+					}
+				}
+			}
+			.bttn {
+				margin: 0 3px;
+			}
+		}
+	}
+}

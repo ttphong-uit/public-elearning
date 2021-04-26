@@ -1,0 +1,47 @@
+.Course-Attended{
+  .list-cart {
+      width: 100%;
+      .content {
+        width: 100%;
+        .header-list-cart {
+          display: flex;
+          padding: 10px 45px 10px 45px;
+          align-items: center;
+          background: white;
+          justify-content: space-between;
+          border: 2px solid rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 0 -2px rgba(0, 0, 0, 0.7);
+          @include text(black, $fs-md, $fw-bold-2);
+          p {
+            margin-right: 62px;
+          }
+        }
+      }
+      .mct-list-cart {
+        overflow-y: overlay;
+        max-height: 500px;
+        padding: 0 15px;
+        margin-top: 5px;
+        .message{
+          padding: 15px;
+          text-align: center;
+          color: rgba(255, 0, 0, 0.7);
+          font-size: 15px;
+          font-weight: 500;
+        }
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: rgb(121, 115, 115);
+          max-height: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      }
+    }
+}

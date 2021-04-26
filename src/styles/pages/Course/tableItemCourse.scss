@@ -1,0 +1,84 @@
+.adjust-center-pagesize{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .nav-tabs{
+        -webkit-font-smoothing: antialiased;
+       border-bottom: none;
+        .nav-item{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+            a{
+                color: #333;
+                text-decoration: none;
+                transition: 0.3s all ease;
+                border: 1px solid transparent;
+                &:hover{
+                    color: $color-pr-1;
+                }
+                &:focus {
+                    text-decoration:none;
+                }
+                &:active {
+                    color: $color-pr-1;
+                    border: 1px solid $color-pr-1;
+                    transform: scale(1.2);
+                    transition: 0.1s all ease;
+                }
+              
+            }
+            .nav-link{
+                margin: 0px 10px;
+                width:30px;
+                height:30px;
+                border-radius: 0px;
+                line-height: 30px;
+                padding: 0px;
+                text-align:center;
+                text-transform:uppercase;
+                letter-spacing:2px;
+                position:relative;
+                font-size: 12px;
+                
+                &:after {
+                    transition: 0.3s all ease;
+                    content:'';
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    bottom:0;
+                    right:0;
+                    border:1px solid $color-pr-1;
+                }
+                &.active{
+                    font-weight: 700;
+                    border:1px solid $color-pr-1;
+                    &:after{
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+                &:before {
+                    content:'';
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    bottom:0;
+                    right:0;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    background:transparent;
+                    z-index:-1;
+                }
+                &:hover {
+                    &:after {
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}
