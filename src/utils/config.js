@@ -1,1 +1,1 @@
-export const api = "http://elearning0706.cybersoft.edu.vn/api";
+export const api = 'https://elearning0706.cybersoft.edu.vn/api';

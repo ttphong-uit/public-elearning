@@ -54,6 +54,7 @@ class DetailCourse extends Component {
 											<div className="col-3">
 												<div className="item-content teacher-content">
 													<img
+													alt="#"
 														className="teacher-img"
 														src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
 													/>
@@ -120,9 +121,9 @@ class DetailCourse extends Component {
 									</div>
 									<div className="image-detail-course">
 										<div className="dc-overflow">
-											<img src="../../img/bg-2.png" />
+											<img src="../../img/bg-2.png"  alt="#"/>
 										</div>
-										<img src={this.props.dataDetailCourse.hinhAnh} />
+										<img src={this.props.dataDetailCourse.hinhAnh} alt="#" />
 									</div>
 								</div>
 							</div>
